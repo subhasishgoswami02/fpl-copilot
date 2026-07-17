@@ -1,0 +1,23 @@
+# FPL Copilot configuration
+# manager_id was the 2025/26 season ID; re-verify once the 2026/27 game opens
+# (Points page URL: https://fantasy.premierleague.com/entry/<ID>/event/1)
+manager_id: 1013185
+
+# safe | balanced | aggressive  (threshold of horizon-EV gain needed to make a
+# transfer instead of rolling it)
+mode: balanced
+
+# how many future gameweeks the transfer optimizer looks across
+horizon_gws: 3
+
+# recommend job acts only within this many hours before the deadline
+recommend_window_hours: 30
+
+# Anthropic model for the reasoning memo and postmortem
+llm_model: claude-sonnet-4-5
+
+# paths (relative to repo root)
+db_path: data/fpl.db
+reports_dir: reports
+rules_path: rules/rules.json
+snapshots_dir: data/snapshots
