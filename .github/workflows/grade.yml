@@ -1,0 +1,38 @@
+name: grade
+
+# Daily. Grades the last finished gameweek once bonus points are confirmed
+# (via the event-status endpoint), then commits the grading report and any new
+# rule hypotheses.
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fpl-copilot-state
+  cancel-in-progress: false
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt && pip install -e .
+      - name: Grade last gameweek if ready
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m fpl_copilot.cli grade --if-ready
+      - name: Commit grading record
+        run: |
+          git config user.name "fpl-copilot-bot"
+          git config user.email "fpl-copilot-bot@users.noreply.github.com"
+          git add reports data rules
+          git diff --cached --quiet || git commit -m "Post-gameweek self-grading"
+          git pull --rebase origin ${GITHUB_REF_NAME} || true
+          git push

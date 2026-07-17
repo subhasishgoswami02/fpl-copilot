@@ -1,0 +1,38 @@
+name: recommend
+
+# Runs every 6 hours; the CLI acts only when inside the pre-deadline window and
+# no recommendation exists yet for the upcoming gameweek (deadlines float, so we
+# poll rather than assume Friday).
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fpl-copilot-state
+  cancel-in-progress: false
+
+jobs:
+  recommend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt && pip install -e .
+      - name: Produce recommendation if due
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m fpl_copilot.cli recommend --if-due
+      - name: Commit pre-deadline record
+        run: |
+          git config user.name "fpl-copilot-bot"
+          git config user.email "fpl-copilot-bot@users.noreply.github.com"
+          git add reports data rules
+          git diff --cached --quiet || git commit -m "Pre-deadline recommendation (committed before FPL deadline)"
+          git pull --rebase origin ${GITHUB_REF_NAME} || true
+          git push
