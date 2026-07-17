@@ -1,0 +1,13 @@
+[
+  {
+    "id": "rotation_risk_penalty",
+    "description": "Players averaging under 65 recent minutes are rotation risks; the base model's minutes estimate under-penalises them.",
+    "condition": {"any": [{"feature": "recent_minutes", "op": "<", "value": 65}]},
+    "adjustment": {"type": "ev_delta", "value": -0.5},
+    "status": "active",
+    "confidence": 0.7,
+    "created_from": "seed",
+    "created_utc": "2026-07-15T00:00:00+00:00",
+    "validation": {"note": "seed rule; validate against backtest before GW1", "event": 0}
+  }
+]
