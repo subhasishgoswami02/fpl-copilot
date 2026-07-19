@@ -19,8 +19,8 @@ jobs:
   grade:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt && pip install -e .
@@ -32,7 +32,12 @@ jobs:
         run: |
           git config user.name "fpl-copilot-bot"
           git config user.email "fpl-copilot-bot@users.noreply.github.com"
+          mkdir -p reports data rules
           git add reports data rules
-          git diff --cached --quiet || git commit -m "Post-gameweek self-grading"
-          git pull --rebase origin ${GITHUB_REF_NAME} || true
-          git push
+          if git diff --cached --quiet; then
+            echo "Nothing to commit (nothing ready to grade this run)."
+          else
+            git commit -m "Post-gameweek self-grading"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
