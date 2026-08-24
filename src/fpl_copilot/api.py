@@ -2,9 +2,14 @@
 
 Every recommend run passes a snapshot_dir; the raw JSON that existed before the
 deadline is written there and committed, so grading can never leak post-deadline data.
+
+Retries use exponential backoff with jitter (added 2026-08-28, see
+resilience.py in this same commit for the next layer: a circuit breaker and
+last-known-good snapshot fallback, not yet wired in here).
 """
 import json
 import pathlib
+import random
 import time
 
 import requests
@@ -39,12 +44,12 @@ class FplApi:
                     return data
                 if resp.status_code in (403, 429, 500, 502, 503):
                     last_err = f"HTTP {resp.status_code}"
-                    time.sleep(2 ** attempt)
+                    time.sleep(2 ** attempt + random.uniform(0, 1))
                     continue
                 resp.raise_for_status()
             except requests.RequestException as exc:
                 last_err = str(exc)
-                time.sleep(2 ** attempt)
+                time.sleep(2 ** attempt + random.uniform(0, 1))
         raise FplApiError(f"GET {path} failed after {retries} attempts: {last_err}")
 
     # -- game-wide ---------------------------------------------------------
