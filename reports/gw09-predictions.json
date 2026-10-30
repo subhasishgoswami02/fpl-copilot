@@ -1,0 +1,627 @@
+{
+ "run_id": "fcc23f131712",
+ "created_utc": "2026-10-30T11:42:21+00:00",
+ "deadline_utc": "2026-10-31T11:00:00Z",
+ "decision": {
+  "event": 9,
+  "mode": "balanced",
+  "free_transfers": 3,
+  "action": "transfer",
+  "transfer": {
+   "out": 20,
+   "in": 53,
+   "delta_horizon_ev": 17.66,
+   "out_ev": 0.0,
+   "in_ev": 17.66,
+   "cost_change": 8
+  },
+  "alternatives": [
+   {
+    "out": 20,
+    "in": 53,
+    "delta_horizon_ev": 17.66,
+    "out_ev": 0.0,
+    "in_ev": 17.66,
+    "cost_change": 8
+   },
+   {
+    "out": 20,
+    "in": 68,
+    "delta_horizon_ev": 16.36,
+    "out_ev": 0.0,
+    "in_ev": 16.36,
+    "cost_change": 11
+   },
+   {
+    "out": 20,
+    "in": 101,
+    "delta_horizon_ev": 14.56,
+    "out_ev": 0.0,
+    "in_ev": 14.56,
+    "cost_change": -4
+   },
+   {
+    "out": 165,
+    "in": 79,
+    "delta_horizon_ev": 14.1,
+    "out_ev": 0.0,
+    "in_ev": 14.1,
+    "cost_change": -15
+   },
+   {
+    "out": 165,
+    "in": 166,
+    "delta_horizon_ev": 14.1,
+    "out_ev": 0.0,
+    "in_ev": 14.1,
+    "cost_change": -10
+   }
+  ],
+  "roll_rationale": null,
+  "captain": 411,
+  "vice_captain": 330,
+  "differential_captain": 599,
+  "xi": [
+   1,
+   330,
+   115,
+   391,
+   124,
+   40,
+   411,
+   399,
+   94,
+   279,
+   599
+  ],
+  "bench_order": [
+   529,
+   8,
+   20,
+   165
+  ],
+  "predicted_points": {
+   "ev": 63.6,
+   "p10": 51.4,
+   "p90": 75.7
+  },
+  "squad_predictions": [
+   {
+    "player_id": 1,
+    "ev": 5.25,
+    "p10": 3.07,
+    "p90": 8.45,
+    "detail": {
+     "exp_minutes": 90.0,
+     "pp90": 6.15,
+     "fixtures": [
+      {
+       "fdr": 4,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   {
+    "player_id": 8,
+    "ev": 2.89,
+    "p10": 1.09,
+    "p90": 5.53,
+    "detail": {
+     "exp_minutes": 53.1,
+     "pp90": 5.74,
+     "fixtures": [
+      {
+       "fdr": 4,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   {
+    "player_id": 20,
+    "ev": 0.0,
+    "p10": 0.0,
+    "p90": 1.54,
+    "detail": {
+     "exp_minutes": 0.0,
+     "pp90": 9.47,
+     "fixtures": [
+      {
+       "fdr": 4,
+       "home": false
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   },
+   {
+    "player_id": 40,
+    "ev": 4.5,
+    "p10": 1.08,
+    "p90": 9.53,
+    "detail": {
+     "exp_minutes": 88.2,
+     "pp90": 4.97,
+     "fixtures": [
+      {
+       "fdr": 4,
+       "home": true
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   {
+    "player_id": 94,
+    "ev": 3.95,
+    "p10": 1.55,
+    "p90": 7.46,
+    "detail": {
+     "exp_minutes": 61.8,
+     "pp90": 6.17,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": true
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   },
+   {
+    "player_id": 115,
+    "ev": 5.55,
+    "p10": 2.7,
+    "p90": 9.75,
+    "detail": {
+     "exp_minutes": 84.2,
+     "pp90": 7.84,
+     "fixtures": [
+      {
+       "fdr": 5,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   {
+    "player_id": 124,
+    "ev": 5.32,
+    "p10": 2.03,
+    "p90": 10.16,
+    "detail": {
+     "exp_minutes": 85.0,
+     "pp90": 7.45,
+     "fixtures": [
+      {
+       "fdr": 5,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   {
+    "player_id": 165,
+    "ev": 0.0,
+    "p10": 0.0,
+    "p90": 1.63,
+    "detail": {
+     "exp_minutes": 0.0,
+     "pp90": 7.52,
+     "fixtures": [
+      {
+       "fdr": 4,
+       "home": true
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   },
+   {
+    "player_id": 279,
+    "ev": 3.72,
+    "p10": 0.67,
+    "p90": 8.21,
+    "detail": {
+     "exp_minutes": 90.0,
+     "pp90": 3.17,
+     "fixtures": [
+      {
+       "fdr": 2,
+       "home": true
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   {
+    "player_id": 330,
+    "ev": 6.82,
+    "p10": 4.02,
+    "p90": 10.95,
+    "detail": {
+     "exp_minutes": 82.8,
+     "pp90": 7.65,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   {
+    "player_id": 391,
+    "ev": 3.77,
+    "p10": 1.79,
+    "p90": 6.67,
+    "detail": {
+     "exp_minutes": 58.2,
+     "pp90": 6.28,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": true
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   },
+   {
+    "player_id": 399,
+    "ev": 4.12,
+    "p10": 2.0,
+    "p90": 7.24,
+    "detail": {
+     "exp_minutes": 54.8,
+     "pp90": 7.24,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": true
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   },
+   {
+    "player_id": 411,
+    "ev": 8.71,
+    "p10": 5.12,
+    "p90": 13.99,
+    "detail": {
+     "exp_minutes": 87.2,
+     "pp90": 8.56,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": true
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   {
+    "player_id": 529,
+    "ev": 2.99,
+    "p10": 0.81,
+    "p90": 6.19,
+    "detail": {
+     "exp_minutes": 90.0,
+     "pp90": 2.75,
+     "fixtures": [
+      {
+       "fdr": 2,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   {
+    "player_id": 599,
+    "ev": 3.16,
+    "p10": 1.08,
+    "p90": 6.21,
+    "detail": {
+     "exp_minutes": 50.5,
+     "pp90": 6.21,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": true
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   }
+  ],
+  "pred_by_id": {
+   "1": {
+    "player_id": 1,
+    "ev": 5.25,
+    "p10": 3.07,
+    "p90": 8.45,
+    "detail": {
+     "exp_minutes": 90.0,
+     "pp90": 6.15,
+     "fixtures": [
+      {
+       "fdr": 4,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   "8": {
+    "player_id": 8,
+    "ev": 2.89,
+    "p10": 1.09,
+    "p90": 5.53,
+    "detail": {
+     "exp_minutes": 53.1,
+     "pp90": 5.74,
+     "fixtures": [
+      {
+       "fdr": 4,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   "20": {
+    "player_id": 20,
+    "ev": 0.0,
+    "p10": 0.0,
+    "p90": 1.54,
+    "detail": {
+     "exp_minutes": 0.0,
+     "pp90": 9.47,
+     "fixtures": [
+      {
+       "fdr": 4,
+       "home": false
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   },
+   "40": {
+    "player_id": 40,
+    "ev": 4.5,
+    "p10": 1.08,
+    "p90": 9.53,
+    "detail": {
+     "exp_minutes": 88.2,
+     "pp90": 4.97,
+     "fixtures": [
+      {
+       "fdr": 4,
+       "home": true
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   "94": {
+    "player_id": 94,
+    "ev": 3.95,
+    "p10": 1.55,
+    "p90": 7.46,
+    "detail": {
+     "exp_minutes": 61.8,
+     "pp90": 6.17,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": true
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   },
+   "115": {
+    "player_id": 115,
+    "ev": 5.55,
+    "p10": 2.7,
+    "p90": 9.75,
+    "detail": {
+     "exp_minutes": 84.2,
+     "pp90": 7.84,
+     "fixtures": [
+      {
+       "fdr": 5,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   "124": {
+    "player_id": 124,
+    "ev": 5.32,
+    "p10": 2.03,
+    "p90": 10.16,
+    "detail": {
+     "exp_minutes": 85.0,
+     "pp90": 7.45,
+     "fixtures": [
+      {
+       "fdr": 5,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   "165": {
+    "player_id": 165,
+    "ev": 0.0,
+    "p10": 0.0,
+    "p90": 1.63,
+    "detail": {
+     "exp_minutes": 0.0,
+     "pp90": 7.52,
+     "fixtures": [
+      {
+       "fdr": 4,
+       "home": true
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   },
+   "279": {
+    "player_id": 279,
+    "ev": 3.72,
+    "p10": 0.67,
+    "p90": 8.21,
+    "detail": {
+     "exp_minutes": 90.0,
+     "pp90": 3.17,
+     "fixtures": [
+      {
+       "fdr": 2,
+       "home": true
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   "330": {
+    "player_id": 330,
+    "ev": 6.82,
+    "p10": 4.02,
+    "p90": 10.95,
+    "detail": {
+     "exp_minutes": 82.8,
+     "pp90": 7.65,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   "391": {
+    "player_id": 391,
+    "ev": 3.77,
+    "p10": 1.79,
+    "p90": 6.67,
+    "detail": {
+     "exp_minutes": 58.2,
+     "pp90": 6.28,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": true
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   },
+   "399": {
+    "player_id": 399,
+    "ev": 4.12,
+    "p10": 2.0,
+    "p90": 7.24,
+    "detail": {
+     "exp_minutes": 54.8,
+     "pp90": 7.24,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": true
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   },
+   "411": {
+    "player_id": 411,
+    "ev": 8.71,
+    "p10": 5.12,
+    "p90": 13.99,
+    "detail": {
+     "exp_minutes": 87.2,
+     "pp90": 8.56,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": true
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   "529": {
+    "player_id": 529,
+    "ev": 2.99,
+    "p10": 0.81,
+    "p90": 6.19,
+    "detail": {
+     "exp_minutes": 90.0,
+     "pp90": 2.75,
+     "fixtures": [
+      {
+       "fdr": 2,
+       "home": false
+      }
+     ],
+     "rules_applied": []
+    }
+   },
+   "599": {
+    "player_id": 599,
+    "ev": 3.16,
+    "p10": 1.08,
+    "p90": 6.21,
+    "detail": {
+     "exp_minutes": 50.5,
+     "pp90": 6.21,
+     "fixtures": [
+      {
+       "fdr": 3,
+       "home": true
+      }
+     ],
+     "rules_applied": [
+      "rotation_risk_penalty"
+     ]
+    }
+   }
+  }
+ }
+}
